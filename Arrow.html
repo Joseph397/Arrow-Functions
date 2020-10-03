@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <script>
+            const videos = [
+              "Pranking my sister, is she ok (gone wrong)",
+              "how to javascript",
+              "html tutorial",
+              "learning the piano",
+              "html basics",
+              "css",
+              "java",
+              "programing",
+              "ui/ux",
+            ];
+
+            const games = [
+              { title: "Mass Effect", rating: 9.5 },
+              { title: "League of Legends", rating: 5 },
+              { title: "Last of Us", rating: 10 },
+              { title: "God of war", rating: 10 },
+              { title: "WWE 2k20", rating: 4 }
+            ];
+            // Old School
+            const someFunction = function(){
+                // code here
+            }
+            // Without function keyword
+            const arrowFunction ( => {
+              }
+            // without keyword or brickets, Return implied
+            const arrowFunction ( =>
+
+            // Old School
+            const newVideos = videos.map(function(video){
+                return video.length < 10 ? video : 'nope';
+            });
+            // Without function keyword , requires ()  with 2 peramiters
+            const newVideos = videos.map(video,index) => {
+                return video.length < 10 ? video : 'nope';
+            }
+            //  Without function keyword, otherwise a single ( will sufice
+            const newVideos = videos.map(video => {
+                return video.length < 10 ? video : 'nope';
+
+            // without keyword or brickets, Return implied
+            const newVideos = videos.map(video => (video.length < 10 ? video : 'nope'));
+
+            const arrowVideos = videos.map(video => video.toUppercase);
+
+            console.log(arrowVideos);
+    </script>
+  </body>
+</html>
